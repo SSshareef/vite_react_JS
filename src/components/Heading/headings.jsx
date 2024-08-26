@@ -1,7 +1,20 @@
-export const MainHeading = () => {
-  return <h1>Main heading</h1>;
+export const MainHeading = (props) => {
+  const { heading, children } = props;
+  return (
+    <div>
+      <h1>{children}</h1>
+      <h1>{heading}</h1>
+    </div>
+  );
 };
 
-export const SecondaryHeading = () => {
-  return <h2>Secondary heading</h2>;
+export const SecondaryHeading = (prop) => {
+  const { heading, children } = prop;
+
+  return (
+    <div>
+      {children}
+      <h2>{heading}</h2>
+    </div>
+  );
 };
