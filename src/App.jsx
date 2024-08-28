@@ -1,31 +1,16 @@
 import { CustomButton } from "./components/Button/button.jsx";
+import LoginComponent from "./components/ChildProp/login.jsx";
 import {
   MainHeading,
   SecondaryHeading,
 } from "./components/Heading/headings.jsx";
 import { CustomImage } from "./components/Images/image.jsx";
 import CustomList, { CustomOrderedList } from "./components/List/list.jsx";
+import { BackroundColorChange } from "./components/Tasks/conditional_rendering.jsx";
 import { recepieData } from "./Data/recepie.js";
 
 const App = () => {
-  return (
-    <>
-      {recepieData.map((eachRecepie) => {
-        return (
-          <div key={eachRecepie.id}>
-            <MainHeading heading={eachRecepie.name}> how are you? </MainHeading>
-            <CustomImage source={eachRecepie.image} width={300} />
-            <SecondaryHeading heading={"ingredients required "}>
-              <strong>I am above the secondary text</strong>
-            </SecondaryHeading>
-            <CustomList list={eachRecepie.ingredients} />
-            <SecondaryHeading heading={"instructions to prepare "} />
-            <CustomList list={eachRecepie.instructions} />
-          </div>
-        );
-      })}
-    </>
-  );
+  return <BackroundColorChange Season="rainy" />;
 };
 
 export default App;
